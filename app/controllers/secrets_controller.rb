@@ -1,7 +1,7 @@
 class SecretsController < ApplicationController
   before_action :logged_in_redirect
   
-  def welcome
+  def show
 
   end
 
