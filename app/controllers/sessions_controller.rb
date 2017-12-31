@@ -3,11 +3,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-    raise params.inspect
+    
+    if params[:user_name].present?
+      session[:user_name] = params[:user_name]
+      redirect_to root_path
+    else 
+      redirect_to login_path  
+    end
   end
 
   def destroy
-    
+    session.delete :user_name
+    redirect_to root_path
   end
 
   def welcome
