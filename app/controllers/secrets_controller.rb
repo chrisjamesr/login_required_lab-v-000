@@ -8,6 +8,6 @@ class SecretsController < ApplicationController
   private
 
   def logged_in_redirect
-    redirect_to root_path unless logged_in?
+    redirect_to login_path unless logged_in?
   end
 end
