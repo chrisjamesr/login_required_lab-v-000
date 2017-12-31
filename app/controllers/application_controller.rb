@@ -5,10 +5,10 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
 
   def current_user
-    session[:user_id]
+    session[:user_name]
   end 
 
   def logged_in?
-    !!session[:user_id]
+    !!session[:user_name]
   end
 end
