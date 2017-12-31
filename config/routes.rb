@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  get 'secrets/welcome'
+
   root 'sessions#welcome'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
